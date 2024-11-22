@@ -28,4 +28,7 @@ Dessa forma, o projeto tem como objetivo facilitar e aproximar a interação ent
     6. Testar a aplicação no navegador no localhost:8080.
 
 ## Vídeo Pitch
- - Link: https://www.youtube.com/watch?v=haIFBOvtYp0
+- Link: https://www.youtube.com/watch?v=haIFBOvtYp0
+
+## Vídeo de Funcionamento de Software
+- Link: https://www.youtube.com/watch?v=T9qkMVOjJKk
