@@ -26,3 +26,6 @@ Dessa forma, o projeto tem como objetivo facilitar e aproximar a interação ent
     5. Rodar a aplicação no arquivo 'Application';
 
     6. Testar a aplicação no navegador no localhost:8080.
+
+## Vídeo Pitch
+ - Link: https://www.youtube.com/watch?v=haIFBOvtYp0
