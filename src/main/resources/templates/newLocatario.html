@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Cadastro de Locatário</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Sistema de Cadastro de Locatário</h1>
+    <hr>
+    <h2>Cadastrar Novo Locatário</h2>
+    <form action="#" th:action="@{/locatario/save}" th:object="${locatario}" method="POST">
+        <h5>Nome</h5>
+        <input type="text" th:field="*{name}" placeholder="Nome" class="form-control mb-4 col-4">
+        <h5>CPF</h5>
+        <input type="text" th:field="*{cpf}" placeholder="CPF" class="form-control mb-4 col-4">
+        <h5>E-mail</h5>
+        <input type="text" th:field="*{email}" placeholder="E-mail" class="form-control mb-4 col-4">
+        <h5>Telefone</h5>
+        <input type="text" th:field="*{telefone}" placeholder="Telefone" class="form-control mb-4 col-4">
+        <h5>Consumo de Energia (em kW)</h5>
+        <input type="number" th:field="*{consumoMedioEnergia}" placeholder="Consumo Médio de Energia" class="form-control mb-4 col-4">
+        <h5>Distribuidora de Energia</h5>
+        <input type="text" th:field="*{distribuidora}" placeholder="Distribuidora de Energia" class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-info col-2">Cadastrar Locatário</button>
+    </form>
+    <hr>
+    <a th:href="@{/}">Voltar para a página inicial</a>
+</div>
+</body>
+</html>

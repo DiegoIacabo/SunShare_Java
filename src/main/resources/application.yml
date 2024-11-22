@@ -1,0 +1,15 @@
+#server:
+#  port: 80
+
+spring:
+  application:
+    name: SunShare
+  datasource:
+    url: jdbc:mariadb://localhost:3306/challenge?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+#spring.application.name=SunShare

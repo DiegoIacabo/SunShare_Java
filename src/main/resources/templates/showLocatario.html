@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Gerenciamento de Locatários</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container" th:object="${locatario}">
+    <h1>Sistema de Gerenciamento de Locatários</h1>
+    <hr>
+    <h2>Detalhes do Locatário</h2>
+    <hr>
+    <h3>Nome</h3>
+    <p th:text="*{name}">Nome</p>
+    <hr>
+    <h3>CPF</h3>
+    <p th:text="*{cpf}">CPF</p>
+    <hr>
+    <h3>E-mail</h3>
+    <p th:text="*{email}">E-mail</p>
+    <hr>
+    <h3>Telefone</h3>
+    <p th:text="*{telefone}">Telefone</p>
+    <hr>
+    <h3>Distribuidora</h3>
+    <p th:text="*{distribuidora}">Distribuidora</p>
+    <hr>
+    <h3>Consumo Médio de Energia (em kW)</h3>
+    <p th:text="*{consumoMedioEnergia}">Consumo Médio de Energia</p>
+    <hr>
+    <a th:href="@{/locatario/showFormForUpdate/{id}(id=${locatario.id})}" class="btn btn-primary">Atualizar</a>
+    <a th:href="@{/locatario/delete/{id}(id=${locatario.id})}" class="btn btn-danger">Deletar</a>
+    <hr>
+    <a th:href="@{/locatario/viewAll}" class="btn btn-primary">Voltar para página de locatários</a>
+    <hr>
+    <a th:href="@{/}" class="btn btn-primary btn-mb-3">Voltar para página inicial</a>
+</div>
+</body>
+</html>

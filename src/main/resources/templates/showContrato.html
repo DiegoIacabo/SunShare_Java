@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Gerenciamento de Contratos</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container" th:object="${contrato}">
+    <h1>Sistema de Gerenciamento de Contratos</h1>
+    <hr>
+    <h2>Detalhes do Contrato</h2>
+    <hr>
+    <h3>Id do Locador</h3>
+    <p th:text="*{locador}">Id do Locador</p>
+    <hr>
+    <h3>Id do Locatário</h3>
+    <p th:text="*{locatario}">Id do Locatário</p>
+    <hr>
+    <h3>Duração do Contrato</h3>
+    <p th:text="*{duracaoContrato}">Duração do Contrato</p>
+    <hr>
+    <h3>Preço (por kW/h)</h3>
+    <p th:text="*{preco}">Preço</p>
+    <hr>
+    <h3>Quantidade de energia (em kW/h)</h3>
+    <p th:text="*{quantidadeEnergia}">Quantidade de Energia</p>
+    <hr>
+    <a th:href="@{/contrato/showFormForUpdate/{id}(id=${contrato.id})}" class="btn btn-primary">Atualizar</a>
+    <a th:href="@{/contrato/delete/{id}(id=${contrato.id})}" class="btn btn-danger">Deletar</a>
+    <hr>
+    <a th:href="@{/contrato/viewAll}" class="btn btn-primary">Voltar para página de Contratos</a>
+    <hr>
+    <a th:href="@{/}" class="btn btn-primary btn-mb-3">Voltar para página inicial</a>
+</div>
+</body>
+</html>

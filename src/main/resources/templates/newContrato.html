@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Gerenciamento de Contratos</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Sistema de Geração de Contratos</h1>
+    <hr>
+    <h2>Gerar novo contrato</h2>
+    <form action="#" th:action="@{/contrato/save}" th:object="${contrato}" method="POST">
+        <h5>Id do Locador</h5>
+        <input type="number" th:field="*{locador}" placeholder="Id do Locador" class="form-control mb-4 col-4">
+        <h5>Id do Locatário</h5>
+        <input type="number" th:field="*{locatario}" placeholder="Id do Locatário" class="form-control mb-4 col-4">
+        <h5>Duração do Contrato (em meses)</h5>
+        <input type="number" th:field="*{duracaoContrato}" placeholder="Duração do Contrato" class="form-control mb-4 col-4">
+        <h5>Preço (por kW/h)</h5>
+        <input type="number" th:field="*{preco}" placeholder="Preço" class="form-control mb-4 col-4">
+        <h5>Quantidade de Energia (em kW)</h5>
+        <input type="number" th:field="*{quantidadeEnergia}" placeholder="Quantidade de energia" class="form-control mb-4 col-4">
+        <button type="submit" class="btn btn-info col-2">Gerar Contrato</button>
+    </form>
+    <hr>
+    <a th:href="@{/}">Voltar para a página inicial</a>
+</div>
+</body>
+</html>
